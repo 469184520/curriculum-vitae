@@ -1,5 +1,6 @@
 import { Project } from '../../types';
 import './index.less';
+import {handleBolderText} from '../utils'
 
 type Props = {
   projects: Project[];
@@ -22,7 +23,15 @@ export default function Projects(props: Props) {
           <div className="project-content">
             <div className="project-detail">
               <div className="project-detail-title">项目介绍</div>
-              <div className="project-detail-content">{project.description}</div>
+              <div className="project-detail-content">
+              {project.description.map((description, index) => {
+                const  formattedItem = handleBolderText(description,project.boldWords);
+                  return (
+                    <p key={index} dangerouslySetInnerHTML={{ __html: formattedItem }}>
+                    </p>
+                  );
+                })}
+              </div>
             </div>
             <div className="project-detail">
               <div className="project-detail-title">技术栈</div>
@@ -37,15 +46,10 @@ export default function Projects(props: Props) {
               </div>
             </div>
             <div className="project-detail">
-              <div className="project-detail-title">项目职责</div>
+              <div className="project-detail-title">工作内容</div>
               <ul>
                 {project.details.map((description, index) => {
-                  let formattedItem = description;
-                  console.log('project', project);
-                  project?.boldWords?.forEach(word => {
-                    const regex = new RegExp(`(${word})`, 'gi'); // 使用正则表达式匹配需要加粗的词
-                    formattedItem = formattedItem.replace(regex, '<strong>\$1</strong>'); // 替换为加粗
-                  });
+                const  formattedItem = handleBolderText(description,project.boldWords);
                   return (
                     <li key={index} dangerouslySetInnerHTML={{ __html: formattedItem }}>
                     </li>

@@ -1,5 +1,6 @@
 import { PersonalSkill } from '../../types';
 import './index.less';
+import { handleBolderText } from '../utils';
 
 type Props = {
   skills: PersonalSkill;
@@ -19,17 +20,13 @@ export default function Skills(props: Props) {
         </div>
       )}
       <ul>
-      {descriptions.map((description, index) => {
-        let formattedItem = description;
-        boldWords?.forEach(word => {
-          const regex = new RegExp(`(${word})`, 'gi'); // 使用正则表达式匹配需要加粗的词
-          formattedItem = formattedItem.replace(regex, '<strong>\$1</strong>'); // 替换为加粗
-        });
-        return (
-          <li key={index} dangerouslySetInnerHTML={{ __html: formattedItem }}>
-          </li>
-        );
-      })}
+        {descriptions.map((description, index) => {
+          const formattedItem = handleBolderText(description, boldWords);
+          return (
+            <li key={index} dangerouslySetInnerHTML={{ __html: formattedItem }}>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

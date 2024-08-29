@@ -35,7 +35,7 @@ export interface Experience {
 export interface Project {
   icon?: string;
   name: string;
-  description: string;
+  description: string[];
   stack: string[];
   details: any[];
   boldWords?: string[];
