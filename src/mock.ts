@@ -10,7 +10,8 @@ export default {
     picture: '/gcl.jpg',
     // github: 'https://github.com/magician-hy',
     blog: 'https://www.cnblogs.com/maleijiejie/',
-    salary: '14-17K'
+    salary: '14-17K',
+    education:'全日制本科'
   },
   skills: {
     icons: [
@@ -34,7 +35,7 @@ export default {
       '能够准确还原设计稿，处理响应式布局',
       '熟悉 ES6+ 语法，能够使用 TS 开发，提高代码可维护性',
       '熟悉 React 技术栈和相关生态，例如 React Router、Redux 以及其他工具库等',
-      '熟练使用支付宝小程序，灵活掌握支付宝小程序开发框架', 
+      '熟练使用支付宝小程序 ，灵活掌握支付宝小程序开发框架', 
       '熟悉主流组件库和图表库使用和二次封装，例如 Ant Design、Element-UI、ECharts 等',
       '了解网络，例如 fetch 和 Axios 使用及二次封装',
       '了解工程化，例如 Vite 和 Webpack 使用及配置，具备项目构建与 Git 工作流经验',
@@ -42,6 +43,8 @@ export default {
       '具备代码质量意识，采用规范、重构、Code Review 等方式进行优化',
       '具备良好英语水平，有英语四级证书，有助于查阅官方文档，并在开发中规范命名'
     ],
+    boldWords:['React 技术栈和相关生态','支付宝小程序 ',
+      '双端兼容性问题的经验','有英语四级证书'],
   },
   experiences: [
     {

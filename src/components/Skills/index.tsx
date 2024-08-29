@@ -6,7 +6,7 @@ type Props = {
 };
 
 export default function Skills(props: Props) {
-  const { icons = [], descriptions = [] } = props.skills;
+  const { icons = [], descriptions = [], boldWords = [] } = props.skills;
 
   return (
     <div className="skill">
@@ -18,13 +18,19 @@ export default function Skills(props: Props) {
           ))}
         </div>
       )}
-      {descriptions.length > 0 && (
-        <ul>
-          {descriptions.map((description, index) => (
-            <li key={index}>{description}</li>
-          ))}
-        </ul>
-      )}
+      {descriptions.map((description, index) => {
+        let formattedItem = description;
+        boldWords?.forEach(word => {
+          const regex = new RegExp(`(${word})`, 'gi'); // 使用正则表达式匹配需要加粗的词
+          formattedItem = formattedItem.replace(regex, '<strong>\$1</strong>'); // 替换为加粗
+        });
+        console.log('formattedItem', formattedItem);
+
+        return (
+          <li key={index} dangerouslySetInnerHTML={{ __html: formattedItem }}>
+          </li>
+        );
+      })}
     </div>
   );
 }

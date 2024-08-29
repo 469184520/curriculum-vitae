@@ -10,11 +10,13 @@ export interface PersonalInfo {
   github?: string;
   blog?: string;
   salary?:string;
+  education?:string
 }
 
 export interface PersonalSkill {
   icons?: string[];
   descriptions: string[];
+  boldWords?: string[];
 }
 
 export interface Experience {
@@ -27,6 +29,7 @@ export interface Experience {
   major?: string;
   time: string;
   descriptions: string[];
+  boldWords?: string[];
 }
 
 export interface Project {

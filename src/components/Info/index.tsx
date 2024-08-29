@@ -17,7 +17,8 @@ export default function Info(props: Props) {
     picture,
     github,
     blog,
-    salary
+    salary,
+    education
   } = props.info;
 
   return (
@@ -71,6 +72,14 @@ export default function Info(props: Props) {
             期望薪资：{salary?salary:''}
           </div>
         </div>
+        )}
+        {
+          education&&(
+            <div className="social-link">
+            <div className="icon-wrapper">
+              学历：{education?education:''}
+            </div>
+          </div>
         )}
       </div>
       <div>
