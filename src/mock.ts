@@ -9,7 +9,7 @@ export default {
     email: '469184520@qq.com',
     picture: '/gcl.jpg',
     // github: 'https://github.com/magician-hy',
-    // blog: 'https://www.cnblogs.com/maleijiejie/',
+    blog: 'https://www.cnblogs.com/maleijiejie/',
     salary: '14-17K',
     education:'全日制本科'
   },
@@ -77,7 +77,7 @@ export default {
     },
     {
       type: 'company',
-      icon: '',
+      icon: '/vue.svg',
       company: '北京慧通明信息科技有限公司',
       position: '前端开发工程师',
       time: '2021 年 06 月 - 2022 年 10 月',
