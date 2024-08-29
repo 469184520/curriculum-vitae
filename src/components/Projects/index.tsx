@@ -40,12 +40,12 @@ export default function Projects(props: Props) {
               <div className="project-detail-title">项目职责</div>
               <ul>
                 {project.details.map((description, index) => {
-                   let formattedItem = description;
-                   console.log('project',project);
+                  let formattedItem = description;
+                  console.log('project', project);
                   project?.boldWords?.forEach(word => {
                     const regex = new RegExp(`(${word})`, 'gi'); // 使用正则表达式匹配需要加粗的词
                     formattedItem = formattedItem.replace(regex, '<strong>\$1</strong>'); // 替换为加粗
-                });
+                  });
                   return (
                     <li key={index} dangerouslySetInnerHTML={{ __html: formattedItem }}>
                     </li>

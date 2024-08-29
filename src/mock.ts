@@ -23,7 +23,7 @@ export default {
       '/antd.svg',
       // '/vite.svg',
       '/webpack.svg',
-      '/rollup.svg',
+      // '/rollup.svg',
       // '/babel.svg',
       '/axios.svg',
       // '/nodejs.svg',
@@ -43,8 +43,14 @@ export default {
       '具备代码质量意识，采用规范、重构、Code Review 等方式进行优化',
       '具备良好英语水平，有英语四级证书，有助于查阅官方文档，并在开发中规范命名'
     ],
-    boldWords:['React 技术栈和相关生态','支付宝小程序 ',
-      '双端兼容性问题的经验','有英语四级证书'],
+    boldWords:[
+      'React 技术栈和相关生态',
+      '支付宝小程序 ',
+      'Code Review',
+      '双端兼容性问题的经验',
+      '有英语四级证书',
+      ' Vite 和 Webpack '
+    ],
   },
   experiences: [
     {

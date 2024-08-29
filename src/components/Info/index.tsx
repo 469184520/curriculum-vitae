@@ -77,7 +77,7 @@ export default function Info(props: Props) {
           education&&(
             <div className="social-link">
             <div className="icon-wrapper">
-              学历：{education?education:''}
+              学历：<strong>{education?education:''}</strong>
             </div>
           </div>
         )}
