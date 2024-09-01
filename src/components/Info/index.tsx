@@ -62,7 +62,7 @@ export default function Info(props: Props) {
           <div className="social-link">
             <div className="icon-wrapper">
               <img src="/logo.svg" alt="GitHub" />
-              <a style={{fontWeight:'400'}} href={`${blog}`}>个人网站</a>：{blog?.replace('https://', '')}
+              <a style={{fontWeight:'400'}} href={`${blog}`}>个人网站：{blog?.replace('https://', '')}</a>
             </div>
           </div>
         )}
