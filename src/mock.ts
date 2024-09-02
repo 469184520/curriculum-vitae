@@ -58,7 +58,7 @@ export default {
       icon: '/fliggy.svg',
       company: '易宝软件科技有限公司（驻场阿里巴巴-飞猪旅行）',
       position: '前端开发工程师',
-      time: '2024 年 05 月 - 2024 年 09 月',
+      time: '2024 年 05 月 - 至今',
       descriptions: [
         '负责北京环球度假区小程序和中后台项目迭代开发',
       ],
