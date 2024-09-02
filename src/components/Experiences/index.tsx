@@ -42,7 +42,7 @@ export default function Experiences(props: Props) {
       )}
       {experiences.some((experience) => experience.type === 'education') && (
         <div>
-          <h2>教育经历</h2>
+          <h2 style={{marginTop:'30px'}}>教育经历</h2>
           {experiences.map((experience, index) => {
             if (experience.type === 'education') {
               return (

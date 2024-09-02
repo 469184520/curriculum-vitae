@@ -40,3 +40,11 @@ export interface Project {
   details: any[];
   boldWords?: string[];
 }
+export interface Others{
+  icon?: string;
+  name: string;
+  description?: string[];
+  stack: string[];
+  details?: any[];
+  boldWords?: string[];
+}
