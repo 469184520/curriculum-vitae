@@ -61,8 +61,12 @@ export default function Info(props: Props) {
         {blog && (
           <div className="social-link">
             <div className="icon-wrapper">
-              <img src="/logo.svg" alt="GitHub" />
-              <a style={{fontWeight:'400'}} href={`${blog}`}>个人网站：{blog?.replace('https://', '')}</a>
+              <a style={{fontWeight:'400'}} target='_blank' href={`${blog}`}>
+                个人博客：
+                <span style={{color:'blue',textDecoration:'underline'}}>
+                  {blog?.replace('https://', '')}
+                </span>
+              </a>
             </div>
           </div>
         )}
